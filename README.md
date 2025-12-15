@@ -1,1 +1,1 @@
-Random repo for me to learn git and GitHub
+Random repo for me to learn Java and Minecraft modding.
