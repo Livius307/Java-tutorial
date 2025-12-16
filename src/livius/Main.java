@@ -1,7 +1,6 @@
 package livius;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,30 +19,32 @@ public class Main {
         answers[2] = "there";
         answers[3] = "idk";
 
-        for (int x = 0; x < 5; x++) {
-            outputQaA(questions, answers);
-        }
-        for (int x = 0; x < 5; x++) {
-            outputQaA(questions, answers);
-        }
-        for (int x = 0; x < 5; x++) {
-            outputQaA(questions, answers);
-        }
-        for (int x = 0; x < 5; x++) {
-            outputQaA(questions, answers);
-        }
-        }
+        List<String> moreQuestions = new ArrayList<>();
+        moreQuestions.add("q4");
+        moreQuestions.add("q5");
+        moreQuestions.add("q4");
+        moreQuestions.add("q4");
+
+        Set<String> countriesToVisit = new HashSet<>();
+        countriesToVisit.add("France");
+        countriesToVisit.add("Germany");
+        countriesToVisit.add("Spain");
+        countriesToVisit.add("France");
+        System.out.println(countriesToVisit);
+
+        Map<String, Integer> countryToPopulation = new HashMap<>();
+        countryToPopulation.put("USA", 331000000);
+        countryToPopulation.put("United Kingdom", 67330000);
+        countryToPopulation.put("Austria", 8950000);
+        System.out.println(countryToPopulation.get("USA"));
+        System.out.println(countryToPopulation.get("Germany"));
+        System.out.println(countryToPopulation);
 
 
-        public static void outputQaA(String[] questions, String[] answers) {
-            for (int i = 0; i < 4; i++) {
-                System.out.println("Q: " + questions[i] + "| A: " + answers[i]);
-            }
+
+        for (int i = 0; i < moreQuestions.size(); i++) {
+            System.out.println(moreQuestions.get(i));
         }
 
-        public static int sum(int x, int y) {
-            int summ = x + y;
-            System.out.println(summ);
-            return summ;
-        }
     }
+}
