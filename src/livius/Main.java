@@ -24,6 +24,12 @@ public class Main {
         moreQuestions.add("q5");
         moreQuestions.add("q4");
         moreQuestions.add("q4");
+        System.out.println(moreQuestions.size());
+        System.out.println(moreQuestions.get(1));
+        System.out.println(moreQuestions.contains("q4"));
+        System.out.println(moreQuestions.isEmpty());
+        System.out.println(moreQuestions.lastIndexOf("q4"));
+        System.out.println(moreQuestions.size());
 
         Set<String> countriesToVisit = new HashSet<>();
         countriesToVisit.add("France");
@@ -45,6 +51,8 @@ public class Main {
         for (int i = 0; i < moreQuestions.size(); i++) {
             System.out.println(moreQuestions.get(i));
         }
+
+
 
     }
 }
