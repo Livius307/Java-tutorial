@@ -52,7 +52,8 @@ public class Main {
             System.out.println(moreQuestions.get(i));
         }
 
-
-
+        for(Map.Entry<String, Integer> entry : countryToPopulation.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + "  Value: " + entry.getValue());
+        }
     }
 }
