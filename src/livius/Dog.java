@@ -1,20 +1,17 @@
 package livius;
 
-public class Dog {
-    public String picture;
-    public String name;
-    public int age;
-
-    /*public Dog() {
-    } */
-
+public class Dog extends Animal {
     public Dog(String picture, String name, int age) {
-        this.picture = picture;
-        this.name = name;
-        this.age = age;
+        super(picture, name, age);
     }
 
-    public void birthday() {
-        age++;
+    @Override
+    public void move() {
+        System.out.println("Dog is running.");
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.println("Wuff");
     }
 }

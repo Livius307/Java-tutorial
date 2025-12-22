@@ -1,16 +1,31 @@
 package livius;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Dog bengie = new Dog("bengie.png", "Bengie", 9 );
-        Dog jeremy = new Dog("jeremy.png", "Jeremy", 7 );
+        Animal bengie = new Dog("bengie.png", "Bengie", 9 );
+        Animal jeremy = new Dog("jeremy.png", "Jeremy", 7 );
+        Animal whiskers = new Cat("whiskers.png", "Whiskers", 5);
+        Bird cheepy = new Bird("cheepy.png", "Cheepy", 6);
+        cheepy.move();
 
-        System.out.println("Bengie age: " + bengie.age);
-        System.out.println("Jeremy age: " + jeremy.age);
+        List<Animal> animals = new ArrayList<>();
+        animals.add(jeremy);
+        animals.add(whiskers);
+        animals.add(cheepy);
 
-        bengie.birthday();
+        List<IFlyable> flyables = new ArrayList<>();
+        flyables.add(cheepy);
+        flyables.add(new Aeroplane());
 
-        System.out.println("Bengie age: " + bengie.age);
-        System.out.println("Jeremy age: " + jeremy.age);
+        for (Animal animal : animals) {
+            animal.move();
+            animal.makeSound();
+        }
+        for (IFlyable flyable : flyables) {
+            flyable.fly();
+        }
     }
 }
